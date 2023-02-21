@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Forms demo, CSC 235, spring 2023</title>
+        <link rel="stylesheet" href="formsdemo.css">
+        <style>
+            h2 { color: cyan}
+        </style>
+    </head>
+    <body>
+        <h1>Homework 3</h1>
+
+        <h2 style="text-align: left">GET form</h2>
+        <form action="https://cs.converse.edu/CSC235/formecho.php" method="get"
+         name="getform">
+            <fieldset class="aboutyou">
+                <legend>About You</legend>
+                <div><label for="getname">What is your first name?</label> 
+                <input name="name" id="getname" type="text"></div>
+                <div><label for="getlast">What is your family name</label> 
+                <input name="last" id="getlast" type="text"></div>
+                <div><label for="getcolor">What is your favorite color?</label>
+                <input type="color" id="getcolor" name="color"></div>
+                <div class="number"><label for="getnumber">What year were you born</label>
+                    <input type="number" name="born" id="getnumber" min="1930" max="2023"></div>
+                <div>
+                <select>
+                    <option value="getcontinant">&mdash;Please choose an option&mdash;</option>
+                    <option id="getNorthAmerica">North America</option>
+                    <option id="getSouthAmerica">South America</option>
+                    <option id="getEurope">Europe</option>
+                    <option id="getAfrica">Africa</option>
+                    <option id="getAsia">Asia</option>
+                    <option id="getAntarctica">Antarctica</option>
+                </select>
+                </div>
+            </fieldset>
+            
+            <fieldset class="choices">
+                <legend>Choices&hellip;</legend>
+                <div id="getclass" class="choice"><p>Pick a Number between 1 and 10</p>
+                    <input type="radio" id="get-1" name="Pick" value="1"> 
+                    <label for="get-1">1</label>
+                    <input type="radio" id="get-2" name="Pick" value="2"> 
+                    <label for="get-2">2</label>
+                    <input type="radio" id="get-3" name="Pick" value="3"> 
+                    <label for="get-3">3</label>
+                    <input type="radio" id="get-4" name="Pick" value="4"> 
+                    <label for="get-4">4</label>
+                    <input type="radio" id="get-5" name="Pick" value="5"> 
+                    <label for="get-5">5</label>
+                </div>
+                <div id="getclothes">class="choice"><p>What colours are you wearing? (check all that apply):</p>
+                    <input type="checkbox" value="red" name="colour-red" id="getred">
+                    <label for="getred">Red</label>
+                    <input type="checkbox" value="orange" name="colour-orange" id="getorange">
+                    <label for="getorange">Orange</label>
+                    <input type="checkbox" value="yellow" name="colour-yellow" id="getyellow">
+                    <label for="getyellow">Yellow</label>
+                    <input type="checkbox" value="green" name="colour-green" id="getgreen">
+                    <label for="getgreen">Green</label>
+                    <input type="checkbox" value="blue" name="colour-blue" id="getblue">
+                    <label for="getblue">Blue</label>
+                    <input type="checkbox" value="purple" name="colour-purple" id="getpurple">
+                    <label for="getpurple">Purple</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Math</legend>
+                <div><label for="getsem">How many semesters have you completed?</label>
+                <input type="range" name="sem" id="getsem" min="0" max="8"
+                    list="getsemlist"></div>
+                    <datalist id="getsemlist">
+                        <option value="0"></option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                    </datalist>
+                <div><label for="gettoday">Today's Date:</label>
+                    <input type="date" id="gettoday" name="Today"></div>
+                <div><label for="getmname">My Middle Name is:</label>
+                    <input type="password" name="mname" id="getmname"></div>
+                    <input type="hidden" name="hidden" value="Ian Garfield">
+            </fieldset>
+            <input type="submit" value="Submit"><input type="reset" value="Reset">
+        </form>
+
+        <h2 style="text-align: left">Post form</h2>
+        <form action="https://cs.converse.edu/CSC235/formecho.php" method="get"
+         name="getform">
+            <fieldset class="aboutyou">
+                <legend>About You</legend>
+                <div><label for="postname">What is your first name?</label> 
+                <input name="name" id="postname" type="text"></div>
+                <div><label for="postlast">What is your family name</label> 
+                <input name="last" id="postlast" type="text"></div>
+                <div><label for="postcolor">What is your favorite color?</label>
+                <input type="color" id="postcolor" name="color"></div>
+                <div class="number"><label for="postnumber">What year were you born</label>
+                <input type="number" name="born" id="postnumber" min="1930" max="2023"></div>
+                <div>
+                <select>
+                    <option value="">&mdash;Please choose an option&mdash;</option>
+                    <option id="postNorthAmerica">North America</option>
+                    <option id="postSouthAmerica">South America</option>
+                    <option id="postEurope">Europe</option>
+                    <option id="postAfrica">Africa</option>
+                    <option id="postAsia">Asia</option>
+                    <option id="postAntarctica">Antarctica</option>
+                </select>
+                </div>
+            </fieldset>
+                
+            <fieldset class="choices">
+                <legend>Choices&hellip;</legend>
+                <div id="postclass" class="choice"><p>Pick a Number between 1 and 10</p>
+                    <input type="radio" id="post-1" name="Pick" value="1"> 
+                    <label for="post-1">1</label>
+                    <input type="radio" id="post-2" name="Pick" value="2"> 
+                    <label for="post-2">2</label>
+                    <input type="radio" id="post-3" name="Pick" value="3"> 
+                    <label for="post-3">3</label>
+                    <input type="radio" id="post-4" name="Pick" value="4"> 
+                    <label for="post-4">4</label>
+                    <input type="radio" id="post-5" name="Pick" value="5"> 
+                    <label for="post-5">5</label>
+                </div>
+                <div id="postclothes">class="choice"><p>What colours are you wearing? (check all that apply):</p>
+                    <input type="checkbox" value="red" name="colour-red" id="postred">
+                    <label for="postred">Red</label>
+                    <input type="checkbox" value="orange" name="colour-orange" id="postorange">
+                    <label for="postorange">Orange</label>
+                    <input type="checkbox" value="yellow" name="colour-yellow" id="postyellow">
+                    <label for="postyellow">Yellow</label>
+                    <input type="checkbox" value="green" name="colour-green" id="postgreen">
+                    <label for="postgreen">Green</label>
+                    <input type="checkbox" value="blue" name="colour-blue" id="postblue">
+                    <label for="postblue">Blue</label>
+                    <input type="checkbox" value="purple" name="colour-purple" id="postpurple">
+                    <label for="postpurple">Purple</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Math</legend>
+                <div><label for="postsem">How many semesters have you completed?</label>
+                <input type="range" name="sem" id="postsem" min="0" max="8"
+                    list="postsemlist"></div>
+                    <datalist id="postsemlist">
+                        <option value="0"></option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                    </datalist>
+                <div><label for="posttoday">Today's Date:</label>
+                    <input type="date" id="posttoday" name="Today"></div>
+                <div><label for="postmname">Alastair's Middle Name is:</label>
+                    <input type="password" name="mname" id="postmname"></div>
+                    <input type="hidden" name="hidden" value="Ian Garfield">
+            </fieldset>
+            <input type="submit" value="Submit"><input type="reset" value="Reset">
+        </form>
+    </body>
+</html>
+    
+    
+    
