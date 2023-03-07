@@ -1,6 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    text-shadow: 50px;
 }
 
 fieldset > div {
@@ -21,5 +20,16 @@ fieldset > div {
     list-style-type: none;
     border: thin solid black;
     background-color: chartreuse;
-    padding: .1em;
+    padding: .2em;
+    margin-top: 2em;
+    margin-left: 2em;
+    box-shadow: 10px 5px 5px cyan;
+}
+
+td {
+    border-top: 5px black;
+    border-left: 5px black;
+    padding: .2ex;
+    border-spacing: 2px;
+    border-collapse: collapse;
 }
