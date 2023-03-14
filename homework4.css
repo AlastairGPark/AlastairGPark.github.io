@@ -33,3 +33,21 @@ td {
     border-spacing: 2px;
     border-collapse: collapse;
 }
+
+.toprow > th:first-child {vertical-align:text-top; }
+
+.line50 { line-height: 50%;}
+
+.float .inner {
+    float:left;
+    width:100px;
+}
+
+.newspaper {
+    columns:5;
+    column-rule: thick dashed green;
+}
+
+.display {
+    display: inline
+}
