@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 7</title>
+</head>
+<body>
+    <button onclick="demo()">Click me!</button>
+    <script>
+        function demo() {
+            // Arithmetic calculations
+            let num1 = 5;
+            let num2 = 10;
+            let sum = num1 + num2;
+            let product = num1 * num2;
+            let quotient = num2 / num1;
+
+            // Concatenate strings
+            let string1 = "Alastair";
+            let string2 = "Park";
+            let greeting = string1 + " " + string2;
+
+            // Conditional
+            let output = "";
+            if (sum > product) {
+                output = "The sum is greater than the product.";
+            } else {
+                output = "The product is greater than or equal to the sum.";
+            }
+
+            // Loop
+            let count = 1;
+            while (count <= quotient) {
+                output += "<br>" + count + ". " + greeting;
+                count++;
+            }
+
+            // Display output
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
